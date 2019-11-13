@@ -1,0 +1,34 @@
+# -*- coding: utf-8 -*-
+# try something like
+
+def index():
+    grid = SQLFORM.grid(Estilo,user_signature=False)
+    return dict(grid=grid)
+
+def new():
+    form = SQLFORM(Estilos)
+    if form.process().accepted:
+        session.flash = 'Cadastrado realizado com sucesso!'
+        redirect(URL('index'))
+    elif form.errors:
+        response.flash = 'Erros no formulário!'
+    else:
+        response.flash = 'Preencha o formulário!'
+    return dict(form=form)
+
+def edit():
+    form = SQLFORM(Estilos, request.args(0, cast=int))
+    if form.process().accepted:
+        session.flash = 'Atualização realizada com sucesso'
+        redirect(URL('index'))
+    elif form.errors:
+        response.flash = 'Erros no formulário!'
+    else:
+        if not response.flash:
+            response.flash = 'Preencha o formulário!'
+    return dict(form=form)
+
+def delete():
+    db(Estilos.id==request.args(0, cast=int)).delete()
+    session.flash = 'Exclusão realizada com sucesso!'
+    redirect(URL('index'))
