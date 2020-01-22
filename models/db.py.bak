@@ -155,14 +155,14 @@ if configuration.get('scheduler.enabled'):
 # auth.enable_record_versioning(db)
 
 Estilo = db.define_table('estilos',
-    Field('descricao', 'string', label='Descrição')
+    Field('descricao', 'string', label='Nado')
     )
 
 Tempo = db.define_table('tempos',
-    Field('data_treino', 'date', label='Data do treino'),
-    Field('nadador', 'reference auth_user', label='Nadador'),
-    Field('estilo', 'reference estilos', label='Estilo de nado', requires=IS_IN_DB(db,'estilos.id','%(descricao)s')),
-    Field('distancia', 'list:string', label='Distância'),
+    Field('data_treino', 'datetime', label='Data', default = request.now, requires = IS_DATE(format=('%d-%m-%Y'))),
+    Field('nadador', 'reference auth_user', label='Nadador', requires=IS_IN_DB(db,'auth_user.id','%(first_name)s')),
+    Field('estilo', 'reference estilos', label='Estilo', requires=IS_IN_DB(db,'estilos.id','%(descricao)s')),
+    Field('distancia', 'float', label='Distância'),
     Field('tempo', 'time',label='Tempo'),
     Field('nadadeira', 'boolean', label='Nadadeira'),
     Field('palmar', 'boolean', label='Palmar'),
