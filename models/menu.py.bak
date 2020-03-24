@@ -16,10 +16,10 @@ response.menu = [
 if not configuration.get('app.production'):
     _app = request.application
     response.menu += [
-        (T('My Sites'), False, URL('admin', 'default', 'site')),
-        (T('Cadastro'), False, '#', [
-            (T('Estilo de nado'), False, URL('estilo', 'index')),
-            (T('Tempo dos atletas'), False, URL('tempo', 'index')),
+        #(T('My Sites'), False, URL('admin', 'default', 'site')),
+        (T('Menu'), False, '#', [
+            (T('Estilo de Nado'), False, URL('estilo', 'index')),
+            (T('Tempo dos Atletas'), False, URL('tempo', 'index')),
         ]),
 
     ]

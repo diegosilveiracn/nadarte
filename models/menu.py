@@ -5,9 +5,9 @@
 # this is the main application menu add/remove items as required
 # ----------------------------------------------------------------------------------------------------------------------
 
-response.menu = [
-    (T('Home'), False, URL('default', 'index'), [])
-]
+#response.menu = [
+#    (T('Home'), False, URL('default', 'index'), [])
+#]
 
 # ----------------------------------------------------------------------------------------------------------------------
 # provide shortcuts for development. you can remove everything below in production
@@ -16,8 +16,8 @@ response.menu = [
 if not configuration.get('app.production'):
     _app = request.application
     response.menu += [
-        (T('My Sites'), False, URL('admin', 'default', 'site')),
-        (T('Cadastro'), False, '#', [
+        #(T('My Sites'), False, URL('admin', 'default', 'site')),
+        (T('Menu'), False, '#', [
             (T('Estilo de Nado'), False, URL('estilo', 'index')),
             (T('Tempo dos Atletas'), False, URL('tempo', 'index')),
         ]),

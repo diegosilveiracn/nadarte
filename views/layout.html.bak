@@ -36,7 +36,8 @@
     <div class="w2p_flash alert alert-dismissable">{{=response.flash or ''}}</div>
     <!-- Navbar ======================================= -->
     <nav class="navbar navbar-light navbar-expand-md bg-faded bg-dark navbar-dark justify-content-center">
-       <a href="http://web2py.com" class="navbar-brand d-flex w-50 mr-auto">Nadarte</a>
+       <!-- <a href="http://web2py.com" class="navbar-brand d-flex w-50 mr-auto">Nadarte</a> -->
+       <a href="{{=URL('default','user/profile')}}" class="navbar-brand d-flex w-50 mr-auto">Nadarte</a>
        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
        </button>
@@ -60,7 +61,7 @@
           {{pass}}
         </ul>
          <form class="form-inline my-2 my-lg-0">
-             <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search"> -->
          </form>
         {{if 'auth' in globals():}}
         <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
