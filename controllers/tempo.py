@@ -1,14 +1,11 @@
 # -*- coding: utf-8 -*-
 # try something like
-
-@auth.requires_login()
 def index():
-    query = ((db.tempos.estilo == db.estilos.id) & 
-             (db.tempos.nadador == db.auth_user.id))
+    query = ((db.tempos.estilo == db.estilos.id) &
+             (db.tempos.atleta == db.atletas.id))
     fields = [db.tempos.id,
               db.tempos.data_treino,
-              db.auth_user.first_name,
-              db.auth_user.last_name,
+              db.atletas.nome,
               db.estilos.descricao,
               db.tempos.distancia,
               db.tempos.tempo,

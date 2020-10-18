@@ -6,8 +6,8 @@
 
 # ---- example index page ----
 def index():
-    #response.flash = T("Hello World")
-    return dict(message=T('Welcome to Nadarte system!'))
+    response.flash = T("Hello World")
+    return dict(message=T('Welcome to web2py!'))
 
 # ---- API (example) -----
 @auth.requires_login()

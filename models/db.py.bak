@@ -158,10 +158,15 @@ Estilo = db.define_table('estilos',
     Field('descricao', 'string', label='Nado')
     )
 
+Atleta = db.define_table('atletas',
+    Field('nome', 'string', label='Nome'),
+    Field('data_nascimento', 'date', label='Data de nascimento', requires=IS_DATE(format=('%d/%m/%Y')))
+    )
+
 Tempo = db.define_table('tempos',
-    Field('data_treino', 'datetime', label='Data', default = request.now, requires = IS_DATE(format=('%d-%m-%Y'))),
-    Field('nadador', 'reference auth_user', label='Nadador', requires=IS_IN_DB(db,'auth_user.id','%(first_name)s')),
-    Field('estilo', 'reference estilos', label='Estilo', requires=IS_IN_DB(db,'estilos.id','%(descricao)s')),
+    Field('data_treino', 'date', label='Data', default = request.now, requires = IS_DATE(format=('%d/%m/%Y'))),
+    Field('atleta', 'reference atletas', label='Atleta', requires=IS_IN_DB(db,'atletas.id','%(nome)s')),
+    Field('estilo', 'reference estilos', label='Nado', requires=IS_IN_DB(db,'estilos.id','%(descricao)s')),
     Field('distancia', 'float', label='Distância'),
     Field('tempo', 'time',label='Tempo'),
     Field('nadadeira', 'boolean', label='Nadadeira'),
