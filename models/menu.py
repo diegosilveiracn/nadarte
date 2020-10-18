@@ -17,10 +17,11 @@ if not configuration.get('app.production'):
     _app = request.application
     response.menu += [
         #(T('My Sites'), False, URL('admin', 'default', 'site')),
-        (T('Menu'), False, '#', [
-            (T('Estilo'), False, URL('estilo', 'index')),
+        (T('Cadastro'), False, '#', [
             (T('Atleta'), False, URL('atleta', 'index')),
-            (T('Tempo'), False, URL('tempo', 'index')),
+            (T('Estilo'), False, URL('estilo', 'index')),
+            #(T('Tempo'), False, URL('tempo', 'index')),
         ]),
+        (T('Tempo'), False, URL('tempo', 'index')),
 
     ]
