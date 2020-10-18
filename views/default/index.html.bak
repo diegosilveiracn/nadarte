@@ -18,8 +18,8 @@
     <!-- <p class="lead">Texto</p> -->
 
     <ol style="word-wrap:break-word;">
-      <li>Esté é um sistema desenvolvido exclusivamente para o Professor Edson</li>
-      <li>O objetivo de controlar o treinamento dos seus atletas de Natação</li>
+      <li>{Esté é um sistema desenvolvido exclusivamente para o Professor Edson</li>
+      <li>o objetivo de controlar o treinamento dos seus atletas de Natação</li>
     </ol>
 
     <!--
