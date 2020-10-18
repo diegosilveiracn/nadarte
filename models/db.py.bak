@@ -111,7 +111,7 @@ auth.settings.registration_requires_verification = False
 auth.settings.registration_requires_approval = False
 auth.settings.reset_password_requires_verification = True
 
-#auth.settings.actions_disabled.append('register')
+auth.settings.actions_disabled.append('register')
 # -------------------------------------------------------------------------  
 # read more at http://dev.w3.org/html5/markup/meta.name.html               
 # -------------------------------------------------------------------------
@@ -161,7 +161,7 @@ Estilo = db.define_table('estilos',
 
 Atleta = db.define_table('atletas',
     Field('nome', 'string', label='Nome'),
-    Field('data_nascimento', 'date', label='Data de nascimento', requires=IS_DATE(format=('%d/%m/%Y')))
+    Field('data_nascimento', 'date', label='Data de nascimento', requires=IS_DATE(format=T('%Y-%m-%d')))
     )
 
 Tempo = db.define_table('tempos',
