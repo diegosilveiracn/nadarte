@@ -111,6 +111,7 @@ auth.settings.registration_requires_verification = False
 auth.settings.registration_requires_approval = False
 auth.settings.reset_password_requires_verification = True
 
+#auth.settings.actions_disabled.append('register')
 # -------------------------------------------------------------------------  
 # read more at http://dev.w3.org/html5/markup/meta.name.html               
 # -------------------------------------------------------------------------
@@ -164,7 +165,7 @@ Atleta = db.define_table('atletas',
     )
 
 Tempo = db.define_table('tempos',
-    Field('data_treino', 'date', label='Data', default = request.now, requires = IS_DATE(format=('%d/%m/%Y'))),
+    Field('data_treino', 'date', label='Data', default = request.now, requires=IS_DATE(format=('%d/%m/%Y'))),
     Field('atleta', 'reference atletas', label='Atleta', requires=IS_IN_DB(db,'atletas.id','%(nome)s')),
     Field('estilo', 'reference estilos', label='Nado', requires=IS_IN_DB(db,'estilos.id','%(descricao)s')),
     Field('distancia', 'float', label='Distância'),

@@ -14,3 +14,14 @@
 [2020-10-18 11:30:53] EDIT nadarte/controllers/tempo.py: 13
 [2020-10-18 11:31:06] EDIT nadarte/models/menu.py: 0
 [2020-10-18 11:32:45] EDIT nadarte/models/db.py: 0
+[2020-10-18 11:50:17] EDIT nadarte/controllers/atleta.py: 1
+[2020-10-18 11:50:34] EDIT nadarte/controllers/atleta.py: 0
+[2020-10-18 11:50:59] EDIT nadarte/controllers/estilo.py: 1
+[2020-10-18 11:51:01] EDIT nadarte/controllers/estilo.py: 0
+[2020-10-18 11:51:29] EDIT nadarte/controllers/tempo.py: 1
+[2020-10-18 11:51:39] EDIT nadarte/controllers/tempo.py: 0
+[2020-10-18 12:01:38] EDIT nadarte/models/db.py: 1
+[2020-10-18 12:01:57] EDIT nadarte/models/db.py: -1
+[2020-10-18 12:02:16] EDIT nadarte/models/db.py: 1
+[2020-10-18 12:02:52] EDIT nadarte/models/db.py: -1
+[2020-10-18 12:03:15] EDIT nadarte/models/db.py: 1

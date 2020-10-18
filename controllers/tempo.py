@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # try something like
+@auth.requires_login()
 def index():
     query = ((db.tempos.estilo == db.estilos.id) &
              (db.tempos.atleta == db.atletas.id))
