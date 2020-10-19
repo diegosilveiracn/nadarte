@@ -79,3 +79,6 @@ CREATE TABLE "tempos"(
     "pubol" CHAR(1)
 );
 success!
+timestamp: 2020-10-19T20:50:18.398262
+ALTER TABLE "atletas" ADD "sexo" CHAR(512);
+success!

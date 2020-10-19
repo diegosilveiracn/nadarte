@@ -161,7 +161,8 @@ Estilo = db.define_table('estilos',
 
 Atleta = db.define_table('atletas',
     Field('nome', 'string', label='Nome'),
-    Field('data_nascimento', 'date', label='Data de nascimento', requires=IS_DATE(format=T('%Y-%m-%d')))
+    Field('data_nascimento', 'date', label='Data de nascimento', requires=IS_DATE(format=T('%Y-%m-%d'))),
+    Field('sexo',label=T('Sexo'),requires=IS_IN_SET((T('Masculino'),T('Feminino'))))
     )
 
 Tempo = db.define_table('tempos',
