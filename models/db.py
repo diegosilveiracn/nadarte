@@ -110,8 +110,7 @@ mail.settings.ssl = configuration.get('smtp.ssl') or False
 auth.settings.registration_requires_verification = False
 auth.settings.registration_requires_approval = False
 auth.settings.reset_password_requires_verification = True
-
-auth.settings.actions_disabled.append('register')
+auth.settings.actions_disabled.append('register') ## Bloquear novos registros
 # -------------------------------------------------------------------------  
 # read more at http://dev.w3.org/html5/markup/meta.name.html               
 # -------------------------------------------------------------------------
