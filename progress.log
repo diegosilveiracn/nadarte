@@ -81,3 +81,10 @@
 [2020-10-21 11:27:39] EDIT nadarte/models/db.py: -1
 [2020-10-21 11:29:16] EDIT nadarte/models/db.py: 1
 [2020-10-21 11:29:28] EDIT nadarte/models/db.py: 0
+[2020-10-22 21:40:47] CREATE atleta/index.html: 0
+[2020-10-22 21:41:07] EDIT nadarte/views/atleta/index.html: 0
+[2020-10-22 21:41:09] EDIT nadarte/views/atleta/index.html: 0
+[2020-10-22 21:42:13] CREATE estilo/index.html: 0
+[2020-10-22 21:42:35] EDIT nadarte/views/estilo/index.html: 0
+[2020-10-22 21:43:05] CREATE tempo/index.html: 0
+[2020-10-22 21:43:26] EDIT nadarte/views/tempo/index.html: 0
